@@ -1,0 +1,68 @@
+/*======================================
+        body-page
+======================================*/
+.body-page {
+    @extend %clearfix;
+}
+/*======================================
+        section-slider
+======================================*/
+.section-slider {
+    position: relative;
+    img {
+        width: 100%;
+    }
+    .nav-slider {
+        z-index: 99;
+        position: absolute;
+        top: 45px;
+        li {
+            border-radius: 20px;
+            background: url('../images/icon-hand.png') no-repeat 90%;
+            background-color: $color-primary;
+            &:not(:last-child) {
+                margin-bottom: 6px;
+            }
+            a {
+                font-size: 18px;
+                text-transform: uppercase;
+                background: url('../images/icon-line.png') no-repeat 20px;
+                color: $color-a;
+                width: 220px;
+                height: 46px;
+                display: block;
+                padding: 14px 0 10px 60px;
+            }
+            &:nth-child(2) {
+                background-color: $color-3;
+                a {
+                    background: url('../images/icon-rau.png') no-repeat 20px;
+                }
+            }
+            &:nth-child(3) {
+                background-color: $color-4;
+                a {
+                    background: url('../images/icon-cu.png') no-repeat 20px;
+                }
+            }
+            &:nth-child(4) {
+                background-color: $color-5;
+                a {
+                    background: url('../images/icon-qua.png') no-repeat 20px;
+                }
+            }
+            &:nth-child(5) {
+                background-color: $color-6;
+                a {
+                    background: url('../images/icon-thit.png') no-repeat 20px;
+                }
+            }
+            &:nth-child(6) {
+                background-color: $color-7;
+                a {
+                    background: url('../images/icon-ca.png') no-repeat 20px;
+                }
+            }
+        }
+    }
+}

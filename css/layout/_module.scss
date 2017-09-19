@@ -1,0 +1,115 @@
+/*------------------- Wraper -------------------*/
+.wrapper {
+    // ...
+}
+.row_clear {
+    @extend %clearfix;
+}
+#container {
+    width: 900px;
+    margin: 0 auto;
+    // padding: 0 15px;
+    @extend %clearfix;
+}
+
+// Typography
+/*------------------- Typography -------------------*/
+.description {
+    // font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+    font-size: 20px;
+    line-height: 34px;
+    text-align: justify;
+}
+.title_h2 {
+    // font-size: 24px;
+    // color: $color-primary;
+    // line-height: 1.8;
+    // font-weight: bold;
+    text-align: center;
+}
+.title_h3 {
+    margin-bottom:16px;
+}
+.title_h5 {
+    // font-size: 15px;
+    // font-family: $font-heading;
+}
+.title_h6 {
+    font-size: 14px;
+    // line-height: 1.8;
+    // color: $color-primary;
+    // font-weight: bold;
+}
+.title_A {
+    // font-size: 24px;
+    // color: $color-primary;
+    // line-height: 1.8;
+    // font-weight: bold;
+}
+.title_B {
+    // font-size: 24px;
+    // line-height: 1.8;
+    // color: $color-primary;
+    // font-weight: bold;
+}
+.title_h4 {
+    // font-size: 24px;
+    // color: $color-primary;
+    // line-height: 1.8;
+    // font-weight: bold;
+}
+.text {
+    // padding:
+    // font-size: ;
+    // color:
+}
+
+/*------------------- Form -------------------*/
+input {
+    // padding:
+    // border:
+    &:focus {
+
+    }
+}
+select {
+    // padding:
+    // border:
+}
+textarea {
+    // padding:
+    // border:
+}
+.btn {
+    text-align: center;
+    // padding:
+    // border:
+    // background:
+    // font-size:
+    // color:
+}
+
+/*------------------- List -------------------*/
+.listItems {
+    @extend %clearfix;
+    // .items {
+    //     float: left;
+    // }
+}
+
+// .list_fade li{
+//     display: none;
+// }
+// .list_fade2 li{
+//     display: none;
+// }
+//
+// .fadeTop {
+//     opacity: 0;
+//     transform: translate(0px, 100px);
+//     transition: all 0.5s;
+// }
+// .fadeTop.ef-slide {
+//     opacity: 1;
+//     transform: translate(0px, 0px);
+// }
