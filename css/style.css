@@ -118,8 +118,8 @@ button:focus, input:focus, a:focus {
     bottom: 0;
     z-index: -1;
     height: 63px;
-    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.15)));
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.15));
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.1)));
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
 }
 
 .order {
@@ -162,6 +162,67 @@ button:focus, input:focus, a:focus {
 }
 
 /*------------------- List -------------------*/
+.items-product {
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    margin-top: 30px;
+    border: 1px solid transparent;
+}
+
+.items-product:hover {
+    border: 1px solid #e6e6e6;
+}
+
+.items-product:hover .order {
+    opacity: 1;
+    display: block;
+}
+
+.items-product.watermark1:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../images/sale-product.png") no-repeat;
+    width: 52px;
+    height: 52px;
+}
+
+.items-product.watermark2:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../images/new-product.png") no-repeat;
+    width: 52px;
+    height: 52px;
+}
+
+.items-product .description {
+    text-align: center;
+}
+
+.items-product .description h4 {
+    font-size: 16px;
+}
+
+.items-product .description .made-in {
+    color: #777;
+    font-size: 14px;
+}
+
+.items-product .description .price {
+    color: #d60c0c;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.items-product .order {
+    opacity: 0;
+}
+
 /*======================================
         Header
 ======================================*/
@@ -330,11 +391,6 @@ button:focus, input:focus, a:focus {
 /*======================================
         section-01
 ======================================*/
-.section-01 .product-tab .items {
-    padding-left: 0;
-    padding-right: 0;
-}
-
 .section-01 .title-tab {
     text-transform: uppercase;
     font-size: 18px;
@@ -366,64 +422,6 @@ button:focus, input:focus, a:focus {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-}
-
-.section-01 .order {
-    opacity: 0;
-}
-
-.section-01 .items {
-    position: relative;
-    margin-top: 30px;
-}
-
-.section-01 .items:hover {
-    border: 1px solid #e6e6e6;
-}
-
-.section-01 .items:hover .order {
-    opacity: 1;
-    display: block;
-}
-
-.section-01 .items.watermark1:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url("../images/sale-product.png") no-repeat;
-    width: 52px;
-    height: 52px;
-}
-
-.section-01 .items.watermark2:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: url("../images/new-product.png") no-repeat;
-    width: 52px;
-    height: 52px;
-}
-
-.section-01 .items .description {
-    text-align: center;
-}
-
-.section-01 .items .description h4 {
-    font-size: 16px;
-}
-
-.section-01 .items .description .made-in {
-    color: #777;
-    font-size: 14px;
-}
-
-.section-01 .items .description .price {
-    color: #d60c0c;
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
 }
 
 /*======================================
