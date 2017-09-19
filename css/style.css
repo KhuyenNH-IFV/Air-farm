@@ -58,6 +58,7 @@ article, aside, details, figure, footer, header, menu, nav, section, summary {
 }
 
 body {
+    font-family: "Roboto", sans-serif;
     color: #333;
     position: relative;
 }
@@ -103,6 +104,37 @@ button:focus, input:focus, a:focus {
 #container {
     width: 900px;
     margin: 0 auto;
+}
+
+.bg-gradient {
+    position: relative;
+}
+
+.bg-gradient:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 63px;
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.15)));
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.15));
+}
+
+.order {
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.order a {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background: url("../images/icon-cart.png") no-repeat 15% #416557;
+    padding: 12px 0 10px;
+    text-align: center;
 }
 
 /*------------------- Typography -------------------*/
@@ -296,8 +328,117 @@ button:focus, input:focus, a:focus {
 }
 
 /*======================================
+        section-01
+======================================*/
+.section-01 .product-tab .items {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.section-01 .title-tab {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 30px 0 15px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.section-01 .title-tab h3 {
+    padding: 0 18px;
+}
+
+.section-01 .title-tab li a {
+    color: #999999;
+}
+
+.section-01 .title-tab li.active a {
+    color: #416557;
+}
+
+.section-01 .title-tab li:hover a {
+    color: #416557;
+}
+
+.section-01 .title-tab .listItems {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.section-01 .order {
+    opacity: 0;
+}
+
+.section-01 .items {
+    position: relative;
+    margin-top: 30px;
+}
+
+.section-01 .items:hover {
+    border: 1px solid #e6e6e6;
+}
+
+.section-01 .items:hover .order {
+    opacity: 1;
+    display: block;
+}
+
+.section-01 .items.watermark1:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../images/sale-product.png") no-repeat;
+    width: 52px;
+    height: 52px;
+}
+
+.section-01 .items.watermark2:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../images/new-product.png") no-repeat;
+    width: 52px;
+    height: 52px;
+}
+
+.section-01 .items .description {
+    text-align: center;
+}
+
+.section-01 .items .description h4 {
+    font-size: 16px;
+}
+
+.section-01 .items .description .made-in {
+    color: #777;
+    font-size: 14px;
+}
+
+.section-01 .items .description .price {
+    color: #d60c0c;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/*======================================
+        section-01
+======================================*/
+/*======================================
         Footer
 ======================================*/
+.footer .copyright {
+    background: #416557;
+    color: #ffffff;
+    text-align: center;
+    padding: 23px 0;
+}
+
 /*-----------------------
         Responsive for device < 780px
 -----------------------------------------*/
@@ -366,5 +507,3 @@ button:focus, input:focus, a:focus {
   /*------------------- Typography_SP -------------------*/
   /*------------------- Form_SP -------------------*/;
 }
-
-/*# sourceMappingURL=style.css.map */

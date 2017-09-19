@@ -2,4 +2,10 @@
         Footer
 ======================================*/
 .footer {
+    .copyright {
+        background: $color-primary;
+        color: $color-a;
+        text-align: center;
+        padding: 23px 0;
+    }
 }
