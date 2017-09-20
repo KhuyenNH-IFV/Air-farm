@@ -2,10 +2,95 @@
         Footer
 ======================================*/
 .footer {
+    background: $color-f;
+    margin-top: 30px;
+    .chinhsach {
+        display: flex;
+        justify-content: space-around;
+    }
+    .camket {
+        padding: 30px 0;
+        display: flex;
+        align-items: center;
+        .note-camket {
+            padding-left: 10px;
+            font-size: 14px;
+            color: $color-e;
+            h5 {
+                font-size: 20px;
+            }
+        }
+    }
+    .mail {
+        background: url('../images/chungnhan.png') no-repeat 100% $color-a;
+        border: 1px solid $color-b;
+        padding: 25px 0;
+        .title-mail {
+            background: url('../images/icon-mail.png') no-repeat 10%;
+            padding-left: 100px;
+            border-right: 1px solid $color-b;
+            line-height: 24px;
+            width: 100%;
+            max-width: 280px;
+        }
+        .box-mail {
+            width: 100%;
+            max-width: 630px;
+            input {
+                background: $color-b;
+                padding: 12px 10px;
+                height: 38px;
+                border-radius: 0;
+                box-shadow: none;
+                border: 0;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                &::-webkit-input-placeholder {
+                    color: $color-e;
+                }
+            }
+            button {
+                border: 1px solid $color-primary;
+                height: 38px;
+                padding: 0 28px;
+                background: $color-primary;
+                color: $color-a;
+                font-size: 16px;
+            }
+        }
+    }
+    .thongtinlienhe {
+        padding-top: 30px;
+        font-size: 14px;
+        h2 {
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+        .mocua {
+            h2 {
+                padding-bottom: 20px;
+            }
+        }
+        .lienhe {
+            line-height: 27px;
+        }
+        .vechungtoi {
+            line-height: 27px;
+        }
+        .chungnhan {
+            .img-chungnhan{
+                padding-top: 15px;
+            }
+            .img-social {
+                padding-top: 20px;
+            }
+        }
+    }
     .copyright {
         background: $color-primary;
         color: $color-a;
         text-align: center;
+        margin-top: 30px;
         padding: 23px 0;
     }
 }

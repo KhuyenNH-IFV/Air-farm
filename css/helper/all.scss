@@ -22,9 +22,37 @@
 .float_left {
     float: left;
 }
+.right_clear {
+    float: right;
+    @extend %clearfix;
+}
 .float_right {
     float: right!important;
 }
 .brd_none {
     border: 0!important;
+}
+.mgr_left_15 {
+    display: inline-block;
+    margin-left: 15px;
+}
+.rau {
+    color: $color-3;
+}
+.cu {
+    color: $color-4;
+}
+.qua {
+    color: $color-5;
+}
+.thit {
+    color: $color-6;
+}
+.thuysan {
+    color: $color-7;
+}
+.btn-primary {
+    background: $color-primary;
+    border: 1px solid $color-primary;
+    font-weight: bold;
 }
