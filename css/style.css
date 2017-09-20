@@ -665,7 +665,7 @@ button:focus, input:focus, a:focus {
 
 /*======================================
 
-        Page --- news.html
+        Page --- news.html & news-detail.html
 
 ======================================*/
 .news-content {
@@ -703,9 +703,17 @@ button:focus, input:focus, a:focus {
 
 /*======================================
 
-        Page --- news-detail.html
+        Page --- product-details
 
 ======================================*/
+.product-details .img-avatar {
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.product-details .items-img-thumb {
+    padding: 8px;
+}
+
 /*======================================
         Footer
 ======================================*/

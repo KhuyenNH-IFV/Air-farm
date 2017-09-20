@@ -6,16 +6,13 @@ $(document).ready(function() {
 
     // accordion nav-left
     $('.heading-nav').click(function(event) {
-        // var checkHas = $('.collapse').hasClass('in');
-        // alert("alo");
         $(this).find('.icon-has').toggleClass('glyphicon-plus glyphicon-minus');
-        // if ($('.glyphicon-minus').hasClass('glyphicon-plus')){
-        //     $('.glyphicon-minus').removeClass('glyphicon-minus');
-        // } else {
-        //     // $('.glyphicon-plus').addClass('glyphicon-minus');
-        // }
-        // if ($(this).find('.collapse').hasClass('in')) {
-        //     $(this).find('.icon-tru').toggleClass('icon-tru, icon-cong');
-        // }
+    });
+
+    // click show thumbnail
+    $('.img-thumb').click(function(e) {
+        e.preventDefault();
+        let dataImg = $(this).attr('data-imgThumb');
+        $('.product-details .img-avatar img').attr('src', dataImg);
     });
 });

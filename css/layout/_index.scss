@@ -120,7 +120,7 @@
 }
 /*======================================
 
-        Page --- news.html
+        Page --- news.html & news-detail.html
 
 ======================================*/
 .news-content {
@@ -159,9 +159,14 @@
 }
 /*======================================
 
-        Page --- news-detail.html
+        Page --- product-details
 
 ======================================*/
-.newsDetails-content {
-
+.product-details {
+    .img-avatar {
+        border-bottom: 1px solid $color-b;
+    }
+    .items-img-thumb {
+        padding: 8px;
+    }
 }
