@@ -92,7 +92,8 @@
         Page --- products.html
 
 ======================================*/
-.products-content {
+.products-contents {
+    padding-top: 30px;
     .title-products-main {
         padding: 0px 0 15px;
         border-bottom: 1px solid #e6e6e6;
@@ -112,6 +113,9 @@
             padding: 5px 40px 5px 5px;
             border: 1px solid $color-b;
             background: url('../images/arrow-down.png')no-repeat 90%;
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }
     .phantrang {
@@ -127,6 +131,10 @@
     padding-top: 30px;
     .row-news-items {
         @extend %clearfix;
+        padding-bottom: 30px;
+        &.last {
+            padding-bottom: 0px;
+        }
     }
     .phantrang {
         padding-top: 30px;
@@ -163,11 +171,15 @@
 
 ======================================*/
 .product-details {
+    padding-top: 30px;
     .img-avatar {
         border-bottom: 1px solid $color-b;
     }
     .items-img-thumb {
         padding: 8px;
+        img {
+            border: 1px solid $color-b;
+        }
     }
     .detail-product-select {
         .title-h2 {
@@ -214,6 +226,7 @@
     }
     .description-post-product {
         .title-h3 {
+            padding-top: 30px;
             font-size: 14px;
             color: $color-e;
             font-weight: bold;
@@ -227,6 +240,24 @@
         img {
             margin: auto;
             display: block;
+        }
+    }
+    .order-product {
+        input {
+            width: 60px;
+            height: 36px;
+            text-align: center;
+            margin: 0 30px 0 15px;
+        }
+        button {
+            width: 240px;
+            height: 36px;
+            background: $color-2;
+            color: $color-a;
+            border: 0;
+        }
+        .fa {
+            padding-right: 10px;
         }
     }
 }

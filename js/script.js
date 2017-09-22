@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    // Nav top mobile
+    $('.btn-toggle').click(function(event) {
+        $('.nav-top').slideToggle();
+    });
     // Tab
     $('.title-tab a').click(function(e) {
         e.preventDefault();
@@ -15,4 +19,11 @@ $(document).ready(function() {
         let dataImg = $(this).attr('data-imgThumb');
         $('.product-details .img-avatar img').attr('src', dataImg);
     });
+
+    // Check width browser
+    var wBrowser = $(window).width();
+    if (wBrowser <= 768) {
+        $('#rau-nav.collapse').removeClass('in');
+        $('.rau-js').toggleClass('glyphicon-minus glyphicon-plus');
+    }
 });
