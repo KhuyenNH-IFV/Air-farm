@@ -13,6 +13,11 @@ $(document).ready(function() {
         $(this).find('.icon-has').toggleClass('glyphicon-plus glyphicon-minus');
     });
 
+    $('.toggle').click(function(event) {
+        event.preventDefault();
+        $('.toggle-in').slideToggle();
+    });
+
     // click show thumbnail
     $('.img-thumb').click(function(e) {
         e.preventDefault();

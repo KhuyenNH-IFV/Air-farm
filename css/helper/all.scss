@@ -36,6 +36,7 @@
     display: inline-block;
     margin-left: 15px;
 }
+// Color
 .rau {
     color: $color-3;
 }
@@ -50,6 +51,22 @@
 }
 .thuysan {
     color: $color-7;
+}
+// Background
+.rau-bg {
+    background-color: $color-3;
+}
+.cu-bg {
+    background-color: $color-4;
+}
+.qua-bg {
+    background-color: $color-5;
+}
+.thit-bg {
+    background-color: $color-6;
+}
+.thuysan-bg {
+    background-color: $color-7;
 }
 .btn-primary {
     background: $color-primary;
