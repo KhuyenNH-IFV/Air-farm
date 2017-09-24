@@ -6,6 +6,15 @@
         padding-top: 30px;
         padding-bottom: 24px;
         background: $color-primary;
+        &.fixed {
+            z-index: 9999;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
     }
     .logo {
         z-index: 99;
@@ -14,6 +23,13 @@
     }
     .title-logo {
         margin-top: 5px;
+        &.scroll-title {
+            position: relative;
+            right: -66px;
+        }
+        img {
+            max-width: inherit;
+        }
     }
     .cart {
         position: relative;
@@ -51,7 +67,7 @@
             border: 0;
             position: absolute;
             top: 5px;
-            right: -8px;
+            right: 6px;
         }
     }
 }

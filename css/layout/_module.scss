@@ -192,9 +192,28 @@ textarea {
     z-index: 99;
     position: absolute;
     top: 45px;
+    &.fixed {
+        z-index: 99999;
+        position: fixed;
+        top: 14px;
+        // left: 0;
+    }
+    &.hidden {
+        display: none;
+    }
     &#nav-left {
+        z-index: 90;
         position: relative;
         top: 0;
+        &.fixed {
+            position: fixed;
+            top: 93px;
+        }
+        &.absolute {
+            position: absolute;
+            bottom: 0;
+            top: inherit;
+        }
         .heading-nav {
             width: 100%;
             >a {
@@ -221,9 +240,17 @@ textarea {
         }
     }
     .heading-nav {
-        background: url('../images/icon-hand.png') no-repeat 90%;
+        // background: url('../images/icon-hand.png') no-repeat 90%;
         &:not(:last-child) {
             margin-bottom: 6px;
+        }
+        &.toggle {
+            >a {
+                &:after {
+                    background: none;
+                }
+            }
+            background: transparent;
         }
         >a {
             position: relative;
@@ -278,8 +305,11 @@ textarea {
             }
         }
     }
-    .toggle-in, .toggle-sub-in {
+    .toggle-in {
         display: none;
+        &.flag {
+            display: block;
+        }
     }
 }
 .wrap-breadcrumb {

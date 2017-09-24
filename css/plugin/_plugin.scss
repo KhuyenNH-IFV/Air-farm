@@ -2,12 +2,18 @@
 .carousel-control {
     display: flex;
     align-items: center;
-    justify-content: center;
     img {
         width: auto;
         max-width: 100%;
     }
-    &.left, &.right {
+    &.left{
+        margin-left: 3%;
+        justify-content: flex-start;
+        background-image: none;
+    }
+    &.right {
+        margin-right: 3%;
+        justify-content: flex-end;
         background-image: none;
     }
 }

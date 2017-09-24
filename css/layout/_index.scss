@@ -20,10 +20,10 @@
     .title-tab {
         text-transform: uppercase;
         font-size: 18px;
-        font-weight: bold;
         padding: 30px 0 15px;
         border-bottom: 1px solid $color-b;
         h3 {
+            font-weight: bold;
             padding: 0 18px;
         }
         li {
@@ -93,6 +93,7 @@
 
 ======================================*/
 .products-contents {
+    position: relative;
     padding-top: 30px;
     .title-products-main {
         padding: 0px 0 15px;

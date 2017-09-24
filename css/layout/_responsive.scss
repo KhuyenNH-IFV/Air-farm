@@ -1,11 +1,14 @@
-/*-----------------------
-        Responsive for device < 1200px
------------------------------------------*/
 @media screen and (max-width: 1200px) {
+    /*-----------------------
+    Responsive for device < 1200px
+    -----------------------------------------*/
     /*------------------- Typography_SP -------------------*/
-    p {
+    body {
         text-align: justify;
     }
+    // p {
+    //     text-align: justify;
+    // }
     .nav-slider {
         top: inherit;
         bottom: 0;
@@ -15,10 +18,10 @@
         }
     }
 }
-/*-----------------------
-        Responsive for device < 780px
------------------------------------------*/
 @media screen and (max-width: 780px) {
+    /*-----------------------
+    Responsive for device < 780px
+    -----------------------------------------*/
     .is_sp {
         display: block;
     }
@@ -100,14 +103,27 @@
     .header {
         .logo {
             position: relative;
-            text-align: center;
+            // text-align: center;
+            width: 25%;
+            img {
+            }
         }
         .title-logo {
             margin: 10px 0;
             text-align: center;
         }
+        .headerIn {
+            padding-top: 0;
+            border-top: 1px solid $color-primary;
+        }
     }
     .btn-toggle {
+        border-bottom: 1px solid $color-primary;
+        background: $color-primary;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // padding: 10px 30px;
         padding: 10px;
         &:after {
             content: "";
@@ -119,7 +135,7 @@
         .fa-bars {
             float: right;
             font-size: 40px;
-            color: $color-primary;
+            color: $color-a;
         }
     }
     .nav-top {

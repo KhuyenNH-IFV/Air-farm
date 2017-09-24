@@ -238,9 +238,31 @@ button:focus, input:focus, a:focus {
   top: 45px;
 }
 
+.nav-slider.fixed {
+  z-index: 99999;
+  position: fixed;
+  top: 14px;
+}
+
+.nav-slider.hidden {
+  display: none;
+}
+
 .nav-slider#nav-left {
+  z-index: 90;
   position: relative;
   top: 0;
+}
+
+.nav-slider#nav-left.fixed {
+  position: fixed;
+  top: 93px;
+}
+
+.nav-slider#nav-left.absolute {
+  position: absolute;
+  bottom: 0;
+  top: inherit;
 }
 
 .nav-slider#nav-left .heading-nav {
@@ -270,12 +292,16 @@ button:focus, input:focus, a:focus {
   display: block;
 }
 
-.nav-slider .heading-nav {
-  background: url("../images/icon-hand.png") no-repeat 90%;
-}
-
 .nav-slider .heading-nav:not(:last-child) {
   margin-bottom: 6px;
+}
+
+.nav-slider .heading-nav.toggle {
+  background: transparent;
+}
+
+.nav-slider .heading-nav.toggle > a:after {
+  background: none;
 }
 
 .nav-slider .heading-nav > a {
@@ -327,8 +353,12 @@ button:focus, input:focus, a:focus {
   background-color: #6fb0d0;
 }
 
-.nav-slider .toggle-in, .nav-slider .toggle-sub-in {
+.nav-slider .toggle-in {
   display: none;
+}
+
+.nav-slider .toggle-in.flag {
+  display: block;
 }
 
 .wrap-breadcrumb {
@@ -482,6 +512,16 @@ button:focus, input:focus, a:focus {
   background: #416557;
 }
 
+.header .headerIn.fixed {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 .header .logo {
   z-index: 99;
   position: absolute;
@@ -490,6 +530,15 @@ button:focus, input:focus, a:focus {
 
 .header .title-logo {
   margin-top: 5px;
+}
+
+.header .title-logo.scroll-title {
+  position: relative;
+  right: -66px;
+}
+
+.header .title-logo img {
+  max-width: inherit;
 }
 
 .header .cart {
@@ -537,7 +586,7 @@ button:focus, input:focus, a:focus {
   border: 0;
   position: absolute;
   top: 5px;
-  right: -8px;
+  right: 6px;
 }
 
 .nav-top {
@@ -577,12 +626,12 @@ button:focus, input:focus, a:focus {
 .section-01 .title-tab {
   text-transform: uppercase;
   font-size: 18px;
-  font-weight: bold;
   padding: 30px 0 15px;
   border-bottom: 1px solid #e6e6e6;
 }
 
 .section-01 .title-tab h3 {
+  font-weight: bold;
   padding: 0 18px;
 }
 
@@ -658,6 +707,7 @@ button:focus, input:focus, a:focus {
 
 ======================================*/
 .products-contents {
+  position: relative;
   padding-top: 30px;
 }
 
@@ -988,14 +1038,6 @@ button:focus, input:focus, a:focus {
   padding: 23px 0;
 }
 
-/*-----------------------
-        Responsive for device < 1200px
------------------------------------------*/
-
-/*-----------------------
-        Responsive for device < 780px
------------------------------------------*/
-
 .carousel-control {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1003,9 +1045,6 @@ button:focus, input:focus, a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .carousel-control img {
@@ -1013,7 +1052,19 @@ button:focus, input:focus, a:focus {
   max-width: 100%;
 }
 
-.carousel-control.left, .carousel-control.right {
+.carousel-control.left {
+  margin-left: 3%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-image: none;
+}
+
+.carousel-control.right {
+  margin-right: 3%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   background-image: none;
 }
 
@@ -1065,6 +1116,11 @@ button:focus, input:focus, a:focus {
   margin-left: 15px;
 }
 
+.mgr_lrm_5 {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
 .rau {
   color: #39b54a;
 }
@@ -1112,8 +1168,11 @@ button:focus, input:focus, a:focus {
 }
 
 @media screen and (max-width: 1200px) {
+  /*-----------------------
+    Responsive for device < 1200px
+    -----------------------------------------*/
   /*------------------- Typography_SP -------------------*/
-  p {
+  body {
     text-align: justify;
   }
 
@@ -1129,6 +1188,9 @@ button:focus, input:focus, a:focus {
 }
 
 @media screen and (max-width: 780px) {
+  /*-----------------------
+    Responsive for device < 780px
+    -----------------------------------------*/
   .is_sp {
     display: block;
   }
@@ -1161,7 +1223,7 @@ button:focus, input:focus, a:focus {
     -----------------------*/
   .header .logo {
     position: relative;
-    text-align: center;
+    width: 25%;
   }
 
   .header .title-logo {
@@ -1169,7 +1231,23 @@ button:focus, input:focus, a:focus {
     text-align: center;
   }
 
+  .header .headerIn {
+    padding-top: 0;
+    border-top: 1px solid #416557;
+  }
+
   .btn-toggle {
+    border-bottom: 1px solid #416557;
+    background: #416557;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 10px;
   }
 
@@ -1184,7 +1262,7 @@ button:focus, input:focus, a:focus {
   .btn-toggle .fa-bars {
     float: right;
     font-size: 40px;
-    color: #416557;
+    color: #ffffff;
   }
 
   .nav-top {
