@@ -1227,7 +1227,6 @@ button:focus, input:focus, a:focus {
   }
 
   .header .title-logo {
-    display: none;
     margin: 10px 0;
     text-align: center;
   }
