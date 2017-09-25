@@ -56,30 +56,6 @@
         // font-size: ;
         // color:
     }
-
-    ///*------------------- Form_SP -------------------*/
-    input {
-        // padding:
-        // border:
-        &:focus {
-
-        }
-    }
-    select {
-        // padding:
-        // border:
-    }
-    textarea {
-        // padding:
-        // border:
-    }
-    .btn {
-        // padding:
-        // border:
-        // background:
-        // font-size:
-        // color:
-    }
     /*-----------------------                                 Components
     -----------------------*/
     .section-slider {
@@ -109,6 +85,7 @@
             }
         }
         .title-logo {
+            display: none;
             margin: 10px 0;
             text-align: center;
         }
@@ -117,13 +94,20 @@
             border-top: 1px solid $color-primary;
         }
     }
+    .fa-bars {
+        &:after {
+            content: "";
+            clear: both;
+            height: 0;
+            display: block;
+            visibility: hidden;
+        }
+    }
     .btn-toggle {
         border-bottom: 1px solid $color-primary;
         background: $color-primary;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        // padding: 10px 30px;
+        display: table;
+        width: 100%;
         padding: 10px;
         &:after {
             content: "";
@@ -132,8 +116,13 @@
             visibility: hidden;
             height: 0;
         }
+        .logo {
+            display: table-cell;
+        }
         .fa-bars {
-            float: right;
+            text-align: right;
+            display: table-cell;
+            vertical-align: middle;
             font-size: 40px;
             color: $color-a;
         }

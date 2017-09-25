@@ -1227,6 +1227,7 @@ button:focus, input:focus, a:focus {
   }
 
   .header .title-logo {
+    display: none;
     margin: 10px 0;
     text-align: center;
   }
@@ -1236,18 +1237,19 @@ button:focus, input:focus, a:focus {
     border-top: 1px solid #416557;
   }
 
+  .fa-bars:after {
+    content: "";
+    clear: both;
+    height: 0;
+    display: block;
+    visibility: hidden;
+  }
+
   .btn-toggle {
     border-bottom: 1px solid #416557;
     background: #416557;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    display: table;
+    width: 100%;
     padding: 10px;
   }
 
@@ -1259,8 +1261,14 @@ button:focus, input:focus, a:focus {
     height: 0;
   }
 
+  .btn-toggle .logo {
+    display: table-cell;
+  }
+
   .btn-toggle .fa-bars {
-    float: right;
+    text-align: right;
+    display: table-cell;
+    vertical-align: middle;
     font-size: 40px;
     color: #ffffff;
   }
