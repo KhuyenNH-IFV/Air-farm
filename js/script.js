@@ -17,37 +17,29 @@ $(document).ready(function() {
                 $('.section-slider>.container>.nav-slider').addClass('fixed');
                 $('.heading-nav.toggle a').css('border', '2px solid #fff');
                 $('.toggle-in').removeClass('flag');
+
+                $('.toggle-wrap').slideUp();
+
+                $('.toggle-in').removeAttr('class', 'toggle-in');
+                $('.heading-nav.toggle').click(function(event) {
+                    // if($('.toggle-wrap:visible')){
+                    //     $('.toggle-wrap').stop().hide();
+                    // }
+                    $('.toggle-wrap').stop().slideToggle();
+                });
             } else {
                 $('.headerIn').removeClass('fixed');
                 $('.logo').fadeIn();
                 $('.title-logo').removeClass('scroll-title');
                 $('.section-slider>.container>.nav-slider').removeClass('fixed');
                 $('.heading-nav.toggle a').css('border', '2px solid transparent');
+
+                $('.toggle-wrap').slideDown();
                 // $('.toggle-in').addClass('flag');
+                // $('.toggle-in').removeAttr('class', 'toggle-in');
             }
         });
     }
-
-    // var pageScroll = $('.products-contents').offset().top;
-    // $(window).scroll(function(event) {
-    //     if ($(this).scrollTop() >= (pageScroll - 120)) {
-    //         $('.products-contents #nav-left').addClass('fixed');
-    //     } else {
-    //         $('.products-contents #nav-left').removeClass('fixed');
-    //     }
-    // });
-
-    // var hBrowser = $(document).height();
-    // var hFooter = $(window).height();
-    // var scrollToFooter = hBrowser - hFooter;
-    // $(window).scroll(function(event) {
-    //     if ($(this).scrollTop() >= (scrollToFooter - 550)) {
-    //         $('.products-contents #nav-left').addClass('absolute').removeClass('fixed');
-    //     } else {
-    //         $('.products-contents #nav-left').removeClass('absolute');
-    //     }
-    // });
-
 
 
     // Nav top mobile
@@ -69,11 +61,6 @@ $(document).ready(function() {
         $('.toggle-in').stop().slideToggle();
         // $('.toggle-in').stop().slideDown();
     });
-
-    // $('.heading-nav.toggle a').click(function(event) {
-    //     return false;
-    // });
-
     // click show thumbnail
     $('.img-thumb').click(function(e) {
         e.preventDefault();

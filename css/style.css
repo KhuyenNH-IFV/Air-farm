@@ -357,7 +357,7 @@ button:focus, input:focus, a:focus {
   display: none;
 }
 
-.nav-slider .toggle-in.flag {
+.nav-slider .flag {
   display: block;
 }
 

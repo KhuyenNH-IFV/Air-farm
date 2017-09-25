@@ -307,9 +307,9 @@ textarea {
     }
     .toggle-in {
         display: none;
-        &.flag {
-            display: block;
-        }
+    }
+    .flag {
+        display: block;
     }
 }
 .wrap-breadcrumb {
