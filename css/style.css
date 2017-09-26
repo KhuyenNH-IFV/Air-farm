@@ -304,6 +304,10 @@ button:focus, input:focus, a:focus {
   background: none;
 }
 
+.nav-slider .heading-nav.toggle-wrap.show {
+  display: block;
+}
+
 .nav-slider .heading-nav > a {
   position: relative;
   border-radius: 20px;
@@ -359,6 +363,10 @@ button:focus, input:focus, a:focus {
 
 .nav-slider .flag {
   display: block;
+}
+
+.nav-slider .toggle-sub.flag {
+  display: block !important;
 }
 
 .wrap-breadcrumb {
@@ -1081,6 +1089,10 @@ button:focus, input:focus, a:focus {
 
 .is_hidden {
   display: none;
+}
+
+.show {
+  display: block !important;
 }
 
 .align_right {

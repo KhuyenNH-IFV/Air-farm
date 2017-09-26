@@ -7,7 +7,7 @@ $(document).ready(function() {
         $('.logo').insertBefore($('.btn-toggle .fa-bars'));
         $('.title-logo').insertBefore($('.btn-toggle .fa-bars'));
     } else {
-        // Scroll fixed nav top
+        // Scroll
         var topScroll = $('.section-slider').offset().top;
         $(window).scroll(function(event) {
             if ($(this).scrollTop() >= topScroll) {
@@ -16,17 +16,17 @@ $(document).ready(function() {
                 $('.title-logo').addClass('scroll-title');
                 $('.section-slider>.container>.nav-slider').addClass('fixed');
                 $('.heading-nav.toggle a').css('border', '2px solid #fff');
-                $('.toggle-in').removeClass('flag');
 
+                $('#flag-id').addClass('toggle-prd');
+
+                // scroll xuống ẩn list danh mục
+                $('.top-page .toggle-in').slideUp();
                 $('.toggle-wrap').slideUp();
+                $('.toggle-sub').addClass('flag');
+                if ($('body').hasClass('top-page')) {
+                    $('.toggle-in').addClass('flag');
+                }
 
-                $('.toggle-in').removeAttr('class', 'toggle-in');
-                $('.heading-nav.toggle').click(function(event) {
-                    // if($('.toggle-wrap:visible')){
-                    //     $('.toggle-wrap').stop().hide();
-                    // }
-                    $('.toggle-wrap').stop().slideToggle();
-                });
             } else {
                 $('.headerIn').removeClass('fixed');
                 $('.logo').fadeIn();
@@ -34,13 +34,29 @@ $(document).ready(function() {
                 $('.section-slider>.container>.nav-slider').removeClass('fixed');
                 $('.heading-nav.toggle a').css('border', '2px solid transparent');
 
+                // scroll top hiện list danh mục
                 $('.toggle-wrap').slideDown();
-                // $('.toggle-in').addClass('flag');
-                // $('.toggle-in').removeAttr('class', 'toggle-in');
+                $('.toggle-in').show();
+
+
+                $('.toggle').click(function(event) {
+                    event.preventDefault();
+                    $('.toggle-in').stop().slideToggle();
+                });
+                // $('#toggle-prd').addClass('toggle');
             }
         });
     }
 
+    $('.top-page .toggle').click(function(event) {
+        event.preventDefault();
+        $('.toggle-in').stop().slideToggle();
+    });
+
+    $('.toggle-prd').click(function(event) {
+        event.preventDefault();
+        $('.toggle-wrap').stop().slideToggle();
+    });
 
     // Nav top mobile
     $('.fa-bars').click(function(event) {
@@ -56,11 +72,7 @@ $(document).ready(function() {
         $(this).find('.icon-has').toggleClass('glyphicon-plus glyphicon-minus');
     });
 
-    $('.toggle').click(function(event) {
-        event.preventDefault();
-        $('.toggle-in').stop().slideToggle();
-        // $('.toggle-in').stop().slideDown();
-    });
+
     // click show thumbnail
     $('.img-thumb').click(function(e) {
         e.preventDefault();

@@ -252,6 +252,11 @@ textarea {
             }
             background: transparent;
         }
+        &.toggle-wrap {
+            &.show {
+                display: block;
+            }
+        }
         >a {
             position: relative;
             border-radius: 20px;
@@ -311,7 +316,13 @@ textarea {
     .flag {
         display: block;
     }
+    .toggle-sub {
+        &.flag {
+            display: block!important;
+        }
+    }
 }
+
 .wrap-breadcrumb {
     background: $color-f;
     .breadcrumb {
